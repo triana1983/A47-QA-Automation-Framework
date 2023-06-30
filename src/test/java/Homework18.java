@@ -7,7 +7,7 @@ public class Homework18 extends BaseTest{
 
     @Test
     public void playSong() throws InterruptedException{
-        openLoginUrl();
+        //openLoginUrl(); = this method was added to the launchBrowser method
         enterEmail("trianasahlin@gmail.com");
         enterPassword("te$t$tudent");
         userLogin();

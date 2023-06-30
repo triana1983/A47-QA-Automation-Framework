@@ -9,7 +9,7 @@ public class Homework17 extends BaseTest{
 
     @Test
     public void addSongToPlaylist() throws InterruptedException{
-        openLoginUrl();
+        // openLoginUrl() = this method has been added to the method launchBrowser
         enterEmail("trianasahlin@gmail.com");
         enterPassword("te$t$tudent");
         userLogin();
