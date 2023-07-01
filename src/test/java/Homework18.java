@@ -1,12 +1,13 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class Homework18 extends BaseTest{
 
     @Test
-    public void playSong() throws InterruptedException{
+    public void playSong() {
         //openLoginUrl(); = this method was added to the launchBrowser method
         enterEmail("trianasahlin@gmail.com");
         enterPassword("te$t$tudent");
@@ -18,23 +19,21 @@ public class Homework18 extends BaseTest{
     }
 
 
-    public void userLogin() throws InterruptedException{
-        WebElement submitLogin = driver.findElement(By.xpath("//button[@type='submit']"));
+    public void userLogin() {
+        WebElement submitLogin = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@type='submit']")));
         submitLogin.click();
-        Thread.sleep(2000);
     }
-    public void clickNextSong() throws InterruptedException{
-        WebElement nextSong = driver.findElement(By.cssSelector("i.next.fa.fa-step-forward.control"));
+    public void clickNextSong(){
+        WebElement nextSong = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("i.next.fa.fa-step-forward.control")));
         nextSong.click();
-        Thread.sleep(2000);
+
     }
-    public void playNextSong() throws InterruptedException{
-        WebElement playSong = driver.findElement(By.cssSelector("span > span.play"));
+    public void playNextSong() {
+        WebElement playSong = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span > span.play")));
         playSong.click();
-        Thread.sleep(2000);
     }
-    private boolean isSongPlaying() {
-        WebElement soundBar = driver.findElement(By.cssSelector("div > button:nth-child(2) > div > img"));
+    public boolean isSongPlaying() {
+        WebElement soundBar = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div > button:nth-child(2) > div > img")));
         return soundBar.isDisplayed();
     }
 

@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -12,19 +13,19 @@ public class Homework16  extends BaseTest {
 
 @Test
 public void registrationNavigation() {
-    ChromeOptions options = new ChromeOptions();
-    options.addArguments("--remote-allow-origins=*");
+    //ChromeOptions options = new ChromeOptions();
+    //options.addArguments("--remote-allow-origins=*");
 
-    WebDriver driver = new ChromeDriver(options);
-    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    //WebDriver driver = new ChromeDriver(options);
+   // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 
 //open url
-    String url = "https://qa.koel.app";
-    driver.get(url);
+   // String url = "https://qa.koel.app";
+    //driver.get(url);
 
 //click registration link
-    WebElement registrationButton = driver.findElement(By.cssSelector("[id='hel']"));
+    WebElement registrationButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[id='hel']")));
     registrationButton.click();
 
     //confirm user reached registration webpage
