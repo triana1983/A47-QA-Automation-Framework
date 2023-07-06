@@ -22,9 +22,10 @@ public class Homework18 extends BaseTest{
     public void userLogin() {
         WebElement submitLogin = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@type='submit']")));
         submitLogin.click();
+
     }
     public void clickNextSong(){
-        WebElement nextSong = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("i.next.fa.fa-step-forward.control")));
+        WebElement nextSong = driver.findElement(By.cssSelector("i.next.fa.fa-step-forward.control"));
         nextSong.click();
 
     }
