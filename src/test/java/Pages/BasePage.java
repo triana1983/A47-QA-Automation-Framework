@@ -24,7 +24,6 @@ public class BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    //By overlayLocator = By.cssSelector(".overlay.loading");
     @FindBy(css = ".overlay.loading")
     private WebElement overlayLocator;
 

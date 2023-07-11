@@ -13,16 +13,6 @@ public class Homework16  extends BaseTest {
 
 @Test
 public void registrationNavigation() {
-    //ChromeOptions options = new ChromeOptions();
-    //options.addArguments("--remote-allow-origins=*");
-
-    //WebDriver driver = new ChromeDriver(options);
-   // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-
-//open url
-   // String url = "https://qa.koel.app";
-    //driver.get(url);
 
 //click registration link
     WebElement registrationButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[id='hel']")));

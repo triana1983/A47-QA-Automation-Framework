@@ -19,10 +19,6 @@ public class HomePage extends BasePage{
     @FindBy(css = "[data-testid='play-btn']")
     private WebElement playBtn;
 
-   // By userAvatarIcon = By.cssSelector("img.avatar");
-   // By allSongs = By.cssSelector("li a.songs");
-   // By playBtn = By.cssSelector("[data-testid='play-btn']");
-
     public WebElement getUserAvatar() {
         return userAvatarIcon;
     }

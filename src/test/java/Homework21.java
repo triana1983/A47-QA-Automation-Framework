@@ -12,9 +12,6 @@ public class Homework21 extends BaseTest{
     String newPlaylistName = "Updated playlist";
     @Test
     public void renamePlaylist() {
-        //enterEmail("trianasahlin@gmail.com");
-        //enterPassword("te$t$tudent");
-        //userLogin();
         LoginPage loginPage = new LoginPage(driver);
         HomePage homePage = new HomePage(driver);
         loginPage.login();

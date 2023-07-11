@@ -15,7 +15,6 @@ public class Homework20 extends BaseTest{
         clickPlaylist();
         removePlaylist();
         clickOkInPopUp();
-        //Thread.sleep(2000);
         Assert.assertTrue(confirmPlaylistDeleted().contains(deletedPlaylistNotification));
 
 

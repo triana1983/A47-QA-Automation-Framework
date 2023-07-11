@@ -18,11 +18,6 @@ public class AllSongsPage extends BasePage{
     @FindBy(css = "div > button:nth-child(2) > div > img")
     private WebElement soundBar;
 
-    //By firstSong = By.cssSelector(".all-songs tr.song-item:nth-child(1)");
-
-    //By playSong = By.cssSelector("li.playback");
-
-    //By soundBar = By.cssSelector("div > button:nth-child(2) > div > img");
 
     // play song functions
     public AllSongsPage contextClickFirstSong() {

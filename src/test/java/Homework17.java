@@ -10,7 +10,6 @@ public class Homework17 extends BaseTest{
 
     @Test
     public void addSongToPlaylist() {
-        // openLoginUrl() = this method has been added to the method launchBrowser
         enterEmail("trianasahlin@gmail.com");
         enterPassword("te$t$tudent");
         userLogin();
@@ -19,14 +18,7 @@ public class Homework17 extends BaseTest{
         clickFirstSong();
         clickAddButton();
         addToPlayList();
-        //Thread.sleep(2000);//we can place it here and selenium will pause for 2 seconds before proceeding with line 22 step
         Assert.assertTrue(getNotificationText().contains(newSongAddedNotificationText));
-
-
-
-
-
-
 
 
 
