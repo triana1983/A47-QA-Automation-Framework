@@ -19,7 +19,7 @@ public class Homework21 extends BaseTest{
         HomePage homePage = new HomePage(driver);
         loginPage.login();
         Assert.assertTrue(homePage.getUserAvatar().isDisplayed());
-        rightClickPlaylist();
+        doubleClickPlaylist();
         changePlaylistInputField();
         Assert.assertTrue(doesPlaylistExist().contains(newPlaylistName));
        
@@ -32,7 +32,7 @@ public class Homework21 extends BaseTest{
         submitLogin.click();
 
     }
-    public void rightClickPlaylist() {
+    public void doubleClickPlaylist() {
         WebElement choosePlayList = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".playlist:nth-child(3)")));
         actions.doubleClick(choosePlayList).perform();
 

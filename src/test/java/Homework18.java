@@ -1,3 +1,6 @@
+import Pages.AllSongsPage;
+import Pages.HomePage;
+import Pages.LoginPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -8,18 +11,30 @@ public class Homework18 extends BaseTest{
 
     @Test
     public void playSong() {
+        LoginPage loginPage = new LoginPage(driver);
+        HomePage homePage = new HomePage(driver);
+        AllSongsPage allSongs = new AllSongsPage(driver);
+
+        loginPage.provideEmail("trianasahlin@gmail.com").providePassword("te$t$tudent").clickSubmit();
+
+        homePage.chooseAllSongList();
+
+        allSongs.contextClickFirstSong().choosePlayOption();
+
+        Assert.assertTrue(allSongs.isSongPlaying());
+
         //openLoginUrl(); = this method was added to the launchBrowser method
-        enterEmail("trianasahlin@gmail.com");
-        enterPassword("te$t$tudent");
-        userLogin();
-        clickNextSong();
-        playNextSong();
-        Assert.assertTrue(isSongPlaying());
+        //enterEmail("trianasahlin@gmail.com");
+        //enterPassword("te$t$tudent");
+        //userLogin();
+        //clickNextSong();
+        //playNextSong();
+        //Assert.assertTrue(isSongPlaying());
 
     }
 
 
-    public void userLogin() {
+    /*public void userLogin() {
         WebElement submitLogin = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@type='submit']")));
         submitLogin.click();
 
@@ -36,7 +51,7 @@ public class Homework18 extends BaseTest{
     public boolean isSongPlaying() {
         WebElement soundBar = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div > button:nth-child(2) > div > img")));
         return soundBar.isDisplayed();
-    }
+    }*/
 
 
 
