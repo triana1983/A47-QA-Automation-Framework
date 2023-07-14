@@ -26,4 +26,15 @@ task testSmoke(type: Test) {
         suites "src/test/resources/SmokeTest.xml"
         systemProperty "browser", System.getProperty("browser")
     }
+  task testRegression(type: Test) {
+      useTestNG() {
+          suites "src/test/resources/Regression.xml"
+          systemProperty "browser", System.getProperty("browserName")
+      }
+  }
+
+
+
+
+
 }

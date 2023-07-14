@@ -22,9 +22,9 @@ public void registrationNavigation() {
 
     String registrationLink = "https://qa.koel.app/registration.php";
 
-    Assert.assertEquals(driver.getCurrentUrl(), registrationLink);
+    Assert.assertEquals(getDriver().getCurrentUrl(), registrationLink);
 
-    driver.quit();
+    //driver.quit();
 
 
 
