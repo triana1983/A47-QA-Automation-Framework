@@ -45,5 +45,9 @@ public class BasePage {
         actions.moveToElement(findElement(webElement)).perform();
     }
 
+    protected void doubleClick(WebElement webElement) {
+        actions.doubleClick(findElement(webElement)).perform();
+    }
+
 
 }

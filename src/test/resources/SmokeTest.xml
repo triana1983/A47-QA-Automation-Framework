@@ -5,7 +5,7 @@
     <parameter name="baseUrl" value="https://qa.koel.app/"></parameter>
     <test name="Olof Test" preserve-order="false">
         <classes>
-            <class name="Homework18">
+            <class name="AllSongsTests">
                 <methods>
                 <include name="playSong()"/>
                 </methods>

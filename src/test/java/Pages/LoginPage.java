@@ -21,15 +21,18 @@ public class LoginPage extends BasePage{
 
 
     public LoginPage provideEmail(String email) {
-        emailField.sendKeys(email);
+        //added helper method for wait
+        findElement(emailField).sendKeys(email);
         return this;
     }
     public LoginPage providePassword(String password) {
-        passwordField.sendKeys(password);
+        //added helper method for wait
+        findElement(passwordField).sendKeys(password);
         return this;
     }
     public LoginPage clickSubmit() {
-        submitBtn.click();
+        //added helper method for wait
+        findElement(submitBtn).click();
         return this;
     }
     public void login() {

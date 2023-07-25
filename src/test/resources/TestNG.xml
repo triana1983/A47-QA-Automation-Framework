@@ -7,10 +7,9 @@
         <classes>
             <class name="LoginTests"/>
             <class name="BaseTest"/>
-            <class name="Homework17"/>
-            <class name="Homework18"/>
-            <class name="Homework20"/>
-            <class name="Homework21"/>
+            <class name="RegistrationTests"/>
+            <class name="AllSongsTests"/>
+            <class name="HomePageTests"/>
             <class name="CucumberRunner"/>
         </classes>
     </test>
